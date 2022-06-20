@@ -256,9 +256,10 @@ class _ContentPageState extends State<ContentPage> {
                   Text(
                     "Show all",
                     style: TextStyle(
-                        color: Colors.blue,
-                        fontSize: 15,
-                        decoration: TextDecoration.none),
+                      color: Colors.blue,
+                      fontSize: 15,
+                      decoration: TextDecoration.none,
+                    ),
                   ),
                   SizedBox(
                     width: 5,
@@ -270,7 +271,15 @@ class _ContentPageState extends State<ContentPage> {
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.blue,
                     ),
-                    child: GestureDetector(),
+                    child: GestureDetector(
+                      onTap: (){
+                        Get.toNamed('/recentContests');
+                      },
+                      child: Icon(
+                        Icons.arrow_forward_ios,
+                        color: Colors.white,
+                      ),
+                    ),
                   )
                 ],
               ),
